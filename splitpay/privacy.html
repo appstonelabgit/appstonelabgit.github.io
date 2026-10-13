@@ -3,73 +3,114 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SplitPay — Privacy Policy</title>
+<title>Privacy Policy · SplitPay</title>
+<meta name="description" content="What data SplitPay handles, who can see it, how long it is kept and how to have it removed.">
 <style>
-  :root { color-scheme: light dark; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    max-width: 680px; margin: 0 auto; padding: 24px 20px 64px;
-    line-height: 1.6; color: #1e1e1e; background: #fff;
+  :root {
+    --green: #246D28;
+    --bg: #F6F8F4;
+    --card: #FFFFFF;
+    --text: #1B1B1B;
+    --muted: #5A6158;
+    --border: #E0E4DE;
+    --link: #246D28;
   }
   @media (prefers-color-scheme: dark) {
-    body { color: #e8e8e8; background: #121212; }
-    a { color: #8ab4f8; }
+    :root {
+      --bg: #121412;
+      --card: #1D201C;
+      --text: #F1F3EF;
+      --muted: #A5ADA2;
+      --border: #333833;
+      --link: #7CC97F;
+    }
   }
-  h1 { font-size: 1.6em; margin-bottom: 0.2em; }
-  h2 { font-size: 1.15em; margin-top: 1.6em; }
-  em { color: #777; font-style: normal; font-size: 0.95em; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 24px 16px;
+    line-height: 1.6;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 36px 28px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .logo {
+    width: 64px; height: 64px;
+    border-radius: 18px;
+    background: var(--green);
+    color: #fff;
+    font-size: 30px; font-weight: 800;
+    display: inline-flex; align-items: center; justify-content: center;
+    margin-bottom: 18px;
+  }
+  h1 { font-size: 26px; line-height: 1.25; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin: 28px 0 8px; }
+  p, ul { font-size: 16px; margin-bottom: 12px; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--link); }
+  .updated { color: var(--muted); font-size: 14px; margin-bottom: 20px; }
+  .footer { color: var(--muted); font-size: 12px; margin: 28px 0 0; }
 </style>
 </head>
 <body>
-<h1>SplitPay Privacy Policy</h1>
-<p><em>Last updated: 11 August 2026</em></p>
-
-<p>SplitPay ("the app") is an expense-splitting utility. This policy explains
-what data the app handles and how.</p>
-
-<h2>What we collect</h2>
-<p>SplitPay has <strong>no user accounts</strong>. We do not collect email
-addresses or location data, and the app never reads your address book.</p>
-<p>The app stores only the content you create in it:</p>
-<ul>
-  <li>Group names and member names you type in</li>
-  <li>Expense records (title, amount, who paid, how it is split)</li>
-  <li>Settlement records</li>
-  <li>Optional receipt photos you attach to expenses</li>
-</ul>
-<p>When adding a group member you can optionally use your device's contact
-picker. The picker is provided by the operating system; the app receives only
-the single contact you choose (name, and on iOS the phone number) and stores
-it as that group member's details. The app has no access to the rest of your
-contacts.</p>
-
-<h2>Where it is stored</h2>
-<p>Content is stored in Google Firebase (Cloud Firestore and Cloud Storage),
-hosted by Google LLC. Data is encrypted in transit (TLS). A copy is cached on
-your device so the app works offline.</p>
-<p>The app uses Firebase Analytics to collect anonymous usage statistics
-(screens viewed, feature usage) to help improve the app. This data is not
-linked to your identity.</p>
-
-<h2>How it is used</h2>
-<p>Your content is used solely to provide the app's functionality: showing
-expenses, computing balances, and syncing between devices. We do not sell,
-share, or use your data for advertising.</p>
-
-<h2>Deletion</h2>
-<p>Deleting a group in the app permanently deletes its expenses and
-settlements from our servers. Deleting an expense removes it from the group.
-For any data deletion request, contact us at the address below.</p>
-
-<h2>Children</h2>
-<p>SplitPay is a general-audience finance utility and is not directed at
-children under 13.</p>
-
-<h2>Changes</h2>
-<p>We may update this policy; the "Last updated" date will change when we
-do.</p>
-
-<h2>Contact</h2>
-<p><a href="mailto:admin@shubhpanchang.com">admin@shubhpanchang.com</a></p>
+  <main class="card">
+    <div class="logo" aria-hidden="true">S</div>
+    <h1>SplitPay Privacy Policy</h1>
+    <p class="updated">Last updated: 13 October 2026</p>
+    <p>SplitPay ("the app") is an expense-splitting utility. This policy explains what data the app handles, who can see it, how long it is kept and how to have it removed.</p>
+    <h2>What we collect</h2>
+    <p>SplitPay has <strong>no user accounts</strong>. We do not collect email addresses or location data, and the app never reads your address book.</p>
+    <p><strong>Content you create.</strong> The app stores what you type or attach:</p>
+    <ul>
+      <li>Group names, descriptions and member names</li>
+      <li>A member's phone number, only if you choose to add one</li>
+      <li>Expense records (title, amount, date, category, notes, who paid, how it is split)</li>
+      <li>Settlement records and, in "Pay through one person" groups, the details you enter for that person (name, account or UPI reference, notes)</li>
+      <li>Optional receipt photos you attach to expenses</li>
+      <li>The group's activity history (who added, changed or removed what)</li>
+    </ul>
+    <p>When adding a group member you can optionally use your device's contact picker. The picker is provided by the operating system; the app receives only the single contact you choose (name, and on iOS the phone number) and stores it as that group member's details. The app has no access to the rest of your contacts.</p>
+    <p><strong>Device identifiers for notifications.</strong> To notify you when something changes in a group, the app stores a Firebase Cloud Messaging device token together with a random install id, once for every group the device has joined. The install id is generated by the app on first launch; it is not your advertising id and is not linked to your identity. Entries you make in a group carry this install id so that your own device is not notified of your own changes.</p>
+    <p><strong>Crash reports.</strong> The app uses Firebase Crashlytics. A crash report contains the device model, the operating system version, the app version and the technical state of the app at the moment of the crash. Crash reports are not linked to your identity.</p>
+    <p><strong>Usage statistics.</strong> The app uses Firebase Analytics to collect anonymous usage statistics: screens viewed and feature usage such as "a group was created" or "an expense was added", with counts and option names only. No names, titles, amounts or group contents are sent to Analytics. This data is not linked to your identity.</p>
+    <h2>Who can see a group</h2>
+    <p><strong>Everything in a group is visible to anyone who has that group's invite code or invite link.</strong> That includes member names, a member's phone number where one was added, every expense, settlement, receipt photo and the activity history. Anyone with the code or link can also add to and change the group. Share a code only with the people the group is for. A group's invite code can be reset in the app, which stops the old code from working in current versions of the app; people who already joined stay in the group.</p>
+    <h2>Where it is stored</h2>
+    <p>Content is stored in Google Firebase (Cloud Firestore and Cloud Storage), operated by Google LLC. Data is encrypted in transit (TLS) and at rest. A copy is cached on your device so the app works offline.</p>
+    <h2>How it is used</h2>
+    <p>Your content is used solely to provide the app's functionality: showing expenses, computing balances, syncing between devices and sending group notifications. We do not sell your data, share it with third parties for their own purposes, or use it for advertising. Google processes it on our behalf as the provider of Firebase.</p>
+    <h2>Retention</h2>
+    <ul>
+      <li><strong>Group content and activity history</strong> are kept for as long as the group exists.</li>
+      <li><strong>Receipt photos</strong> are kept for as long as the group exists, including the photo of an expense that was later deleted from the group.</li>
+      <li><strong>Notification tokens</strong> are kept until the device leaves the group, the token stops being valid, or the group is removed.</li>
+      <li><strong>Deleted groups</strong> are kept for 7 days so they can be restored, then removed permanently together with their expenses, settlements, activity history, receipt photos, notification tokens and invite codes.</li>
+      <li><strong>Backups.</strong> We do not keep our own backup copies of group data. After deletion, data can remain in Google's systems for a limited time under Google's own deletion process.</li>
+      <li><strong>Crash reports and usage statistics</strong> are kept under Google's standard retention for Crashlytics (90 days) and Analytics (up to 14 months).</li>
+    </ul>
+    <h2>Deletion</h2>
+    <ul>
+      <li><strong>Leaving a group</strong> removes the group from your device and deletes your device's notification token for it. The group and what you added to it stay for the remaining members.</li>
+      <li><strong>"Delete for everyone"</strong> marks the group as deleted for all members. It can be restored for 7 days; after that all of the group's data is removed from our servers.</li>
+      <li><strong>Deleting an expense</strong> removes it from the group.</li>
+      <li><strong>Uninstalling the app</strong> removes the copy cached on your device.</li>
+    </ul>
+    <p>For any deletion or data request, write to <strong><a href="mailto:admin@shubhpanchang.com">admin@shubhpanchang.com</a></strong> with the group's invite code. Because the app has no accounts, the invite code is how we identify the data.</p>
+    <h2>Children</h2>
+    <p>SplitPay is a general-audience finance utility and is not directed at children under 13.</p>
+    <h2>Changes</h2>
+    <p>We may update this policy; the "Last updated" date will change when we do.</p>
+    <h2>Contact</h2>
+    <p><a href="mailto:admin@shubhpanchang.com">admin@shubhpanchang.com</a></p>
+    <p class="footer">SplitPay — split group expenses, settle up simply.</p>
+  </main>
 </body>
 </html>
